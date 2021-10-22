@@ -1,0 +1,58 @@
+﻿<Window x:Class="CountdownTimer.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CountdownTimer"
+        mc:Ignorable="d"
+        Title="MainWindow" ResizeMode="NoResize" Height="615" Width="800">
+    <Grid>
+        <Image Stretch="Fill">
+            <Image.Source>
+                <ImageSource>C:\Users\29166.DESKTOP-3A4STP9\source\repos\WPF Learning\CountdownTimer\CountdownTimer\Resoures\Background.jpg</ImageSource>
+            </Image.Source>
+        </Image>
+
+        <Grid VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,435,0,0" Height="92">
+
+            <Label FontWeight="Bold" Content="ДО НОВОГО ГОДА ОСТАЛОСЬ:" FontSize="20" Margin="0,-39,0,83"></Label>
+
+            <StackPanel Orientation="Horizontal" Margin="10, 10, -10, -10">
+
+                <StackPanel.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="Padding" Value="10, 0, 10, 0" />
+                    </Style>
+                    <Style TargetType="Label">
+                        <Setter Property="HorizontalAlignment" Value="Center" />
+                    </Style>
+                </StackPanel.Resources>
+
+                <Border>
+                    <StackPanel Grid.Column="0">
+                        <Label x:Name="daysAmount" Content="0" FontSize="35" />
+                        <Label Content="Дней"/>
+                    </StackPanel>
+                </Border>
+                <Border>
+                    <StackPanel Grid.Column="1">
+                        <Label x:Name="hoursAmount" Content="0" FontSize="35"/>
+                        <Label Content="Часов"/>
+                    </StackPanel>
+                </Border>
+                <Border>
+                    <StackPanel Grid.Column="2">
+                        <Label x:Name="minutesAmount" Content="0" FontSize="35"/>
+                        <Label Content="Минут"/>
+                    </StackPanel>
+                </Border>
+                <Border>
+                    <StackPanel Grid.Column="3" >
+                        <Label x:Name="secondsAmount" Content="0" FontSize="35"/>
+                        <Label Content="Секунд"/>
+                    </StackPanel>
+                </Border>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Window>
